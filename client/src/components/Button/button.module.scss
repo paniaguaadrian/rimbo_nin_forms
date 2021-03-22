@@ -1,0 +1,33 @@
+@import "../../styles/variables";
+@import "../../styles/breakpoint";
+
+Button {
+  width: 13rem;
+  height: 3.2rem;
+  font-size: 1.7rem !important;
+  font-weight: 400 !important;
+  font-family: Nunito, sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+  touch-action: manipulation;
+  color: $white;
+  border: none;
+  border-radius: 20px;
+  background: $gradient;
+
+  @include xl {
+    // margin-left: 1rem !important;
+    width: 8rem;
+    height: 2rem;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    font-family: Nunito, sans-serif;
+    cursor: pointer;
+    transition: all 0.2s;
+    touch-action: manipulation;
+    color: $white;
+    border: none;
+    border-radius: 30px;
+    background: $gradient;
+  }
+}

@@ -1,0 +1,525 @@
+@import "../../styles/variables";
+@import "../../styles/breakpoint";
+
+.RegisterContainer {
+  min-height: calc(100vh - 180px);
+  @include xl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 190px);
+  }
+}
+
+.Register {
+  padding: 0 3rem;
+  margin-top: 1rem;
+
+  @include xl {
+    font-size: 1rem;
+    padding: 0 3rem;
+    margin-top: 0rem;
+  }
+
+  h1,
+  h4 {
+    text-align: center;
+    color: $primary-color;
+  }
+
+  h1 {
+    margin: 0 auto;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 100%;
+
+    @include xl {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      font-weight: 400;
+      padding: 0 10rem;
+    }
+  }
+  h2 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0 3rem;
+    @include xl {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+      padding: 0 20rem;
+    }
+  }
+  p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: $danger;
+    text-align: center;
+
+    @include xl {
+      margin: 0 auto;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      font-weight: 300;
+      color: $danger;
+      text-align: center;
+      padding: 0 20rem;
+    }
+  }
+  h4 {
+    padding-bottom: 0;
+    font-size: 2.2rem;
+
+    @include xl {
+      padding-bottom: 0rem;
+      font-size: 1rem;
+    }
+  }
+  h4 span {
+    font-weight: 600;
+  }
+}
+
+.ExtraInfoContainer {
+  margin: 3rem 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  @include xl {
+    margin: 1.5rem 0;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  p {
+    margin-bottom: 0.5rem;
+    padding: 0 2rem;
+    @include xl {
+      margin-bottom: 0.5rem;
+      padding: 0 4rem;
+      width: 75%;
+    }
+  }
+  span {
+    font-weight: 600 !important;
+    text-decoration: underline;
+  }
+}
+
+.FormContent {
+  display: flex;
+  // width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 3rem;
+  margin-top: 4rem;
+  flex: 1 0 auto;
+  padding: 2rem 2rem;
+  border-radius: 14px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+  @include xl {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding: 2rem 2rem;
+    box-shadow: none;
+  }
+}
+
+.FormIntern {
+  @include xl {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.FormLeft {
+  @include xl {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2rem;
+    width: 25%;
+  }
+}
+
+.FormRight {
+  @include xl {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2rem;
+    width: 25%;
+  }
+}
+
+.AloneButtonContainer {
+  margin: 3rem 0;
+  text-align: right;
+  @include xl {
+    margin: 0rem 0;
+    text-align: center;
+  }
+}
+
+.ButtonContainer {
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  @include xl {
+    margin: 0;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+}
+
+.selectContainer {
+  margin-bottom: 4rem;
+  font-family: Nunito, sans-serif;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  @include xl {
+    margin-bottom: 3rem;
+    font-family: Nunito, sans-serif;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+  }
+  .selectLabel {
+    color: $primary-color;
+    font-weight: 600;
+    font-size: 1.7rem;
+    outline: none;
+    @include xl {
+      color: $primary-color;
+      font-weight: 600;
+      font-size: 1rem;
+      outline: none;
+    }
+  }
+  .selectInput {
+    height: 2.5em;
+    padding: 0.4em 0.8em;
+    border-radius: 20px;
+    border: 1px solid $tertiary-color;
+    background-color: none;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: rgba(2, 2, 2, 0.575);
+    background-color: white;
+    -webkit-appearance: none;
+    cursor: pointer;
+    @include xl {
+      height: 2.2rem;
+      // width: 100%;
+      padding: 0.4em 0.8em;
+      border-radius: 20px;
+      border: 1px solid $tertiary-color;
+      background-color: none;
+      font-size: 0.8rem;
+      margin-top: 1rem;
+      color: rgba(2, 2, 2, 0.575);
+      background-color: white;
+      -webkit-appearance: none;
+      cursor: pointer;
+    }
+
+    &:active,
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+      background-color: none !important;
+    }
+  }
+}
+
+.ConfirmAddressContainer {
+  @include xl {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+}
+
+.TermsContainer {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  @include xl {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+  }
+
+  p {
+    text-align: left;
+    font-size: 1.2rem;
+    @include xl {
+      text-align: left;
+      font-size: 1rem;
+    }
+  }
+  a {
+    color: $tertiary-color;
+    font-weight: 600;
+  }
+}
+
+.CompleteContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+
+  height: 75vh;
+  @include xl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+
+    background-color: white;
+    height: 77.7vh;
+  }
+}
+
+.CompleteText {
+  margin: 0 auto;
+  color: black;
+  @include xl {
+    margin: 0 auto;
+    color: black;
+  }
+  h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  h3 {
+    margin-bottom: 3rem;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+  }
+}
+
+.CardContainer {
+  padding: 0rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  @include xl {
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.CardInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 1rem;
+  border-radius: 14px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.3) 0px 0.125em 0.5em,
+    rgba(253, 251, 251, 0.1) 0px 0px 0px 1px inset;
+  padding: 2rem 1.5rem;
+  width: 100%;
+  @include xl {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 1rem;
+    border-radius: 14px;
+    box-shadow: rgba(0, 0, 0, 0.61) 0px 0.0625em 0.0625em,
+      rgba(0, 0, 0, 0.541) 0px 0.125em 0.5em,
+      rgba(133, 130, 130, 0.1) 0px 0px 0px 1px inset;
+    padding: 1rem 0rem;
+    width: 25rem;
+  }
+  h3 {
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    font-size: 1.7rem;
+    text-align: center;
+    text-decoration: underline;
+    @include xl {
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+      font-size: 1rem;
+      text-align: center;
+      text-decoration: underline;
+    }
+  }
+  p {
+    color: $primary-color;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: left;
+    margin-top: 0.5rem;
+    @include xl {
+      color: $primary-color;
+      font-size: 1rem;
+      font-weight: 400;
+      text-align: left;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+.ErrorInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  @include xl {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  p {
+    font-weight: 400;
+    color: $danger;
+    font-size: 1.3rem;
+    @include xl {
+      font-weight: 400;
+      color: $danger;
+      font-size: 1rem;
+    }
+  }
+}
+
+.TermsContainerStripe {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+  @include xl {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  p {
+    font-weight: 300;
+    font-size: 1.6rem;
+
+    @include xl {
+      font-weight: 300;
+      font-size: 1rem;
+    }
+  }
+  a {
+    color: $tertiary-color;
+    font-weight: 400;
+    @include xl {
+      color: $tertiary-color;
+      font-weight: 400;
+    }
+  }
+  input {
+    margin-right: 1rem;
+    height: 4rem;
+    width: 4rem;
+    @include xl {
+      margin-right: 0.5rem;
+      height: 1.1rem;
+      width: 1.1rem;
+    }
+  }
+}
+
+.SuccessPageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  height: 100vh;
+  @include xl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    background-color: white;
+    height: 100vh;
+  }
+}
+
+.SuccessPageText {
+  margin: 0 auto;
+  color: black;
+  @include xl {
+    margin: 0 auto;
+    color: black;
+  }
+  h1 {
+    margin-bottom: 1.5rem;
+    font-size: 3.5rem;
+    font-weight: 400;
+  }
+  h2 {
+    margin-bottom: 3rem;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  p {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}

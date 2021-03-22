@@ -1,0 +1,38 @@
+@import "../../styles/variables";
+@import "../../styles/_breakpoint";
+
+.NavBarContainer {
+  background: rgb(255, 255, 255);
+  height: 2rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .BadiImage {
+    height: 2rem !important;
+    margin-left: 2rem;
+  }
+
+  .ToggleLanguageButton {
+    background: none !important;
+    background-color: none !important;
+    width: 4rem !important;
+    margin: 0 auto;
+  }
+
+  .ToggleButtonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+  }
+
+  .LanguageLogo {
+    margin: 0 0 !important;
+    height: 2rem !important;
+    @include xl {
+      margin: 0 0 !important;
+      height: 1rem !important;
+    }
+  }
+}

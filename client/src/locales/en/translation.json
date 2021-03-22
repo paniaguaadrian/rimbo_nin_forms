@@ -1,0 +1,62 @@
+{
+  "nextStepButton": "Next Step",
+  "prevStepButton": "Previous Step",
+  "submitButton": "Send",
+  "Home": {
+    "title": "Welcome to the union between Rimbo and Badi",
+    "subtitle": "If you're an agent, contact with...",
+    "subtext": "If you want to know more about.... do the following..."
+  },
+  "RJ1": {
+    "header": {
+      "title": "List your tenant",
+      "subtitleOne": "Fill out the fields.",
+      "subtitleTwo": "Rimbo screens in 24 hours.",
+      "subtitleThree": "Receive a response via email."
+    },
+    "stepZero": {
+      "agencyName": "Agency Name",
+      "contactPerson": "Contact Person",
+      "contactPersonPL": "Enter full name",
+      "emailPerson": "Email",
+      "emailPersonPL": "Enter a valid email address",
+      "phonePerson": "Phone Number",
+      "phonePersonPL": "Enter phone number"
+    },
+    "stepOne": {
+      "tenantName": "Tenant's Full Name",
+      "tenantEmail": "Tenant's email",
+      "tenantPhone": "Tenant's phone number",
+      "tenantNamePL": "Enter name and surname",
+      "tenantEmailPL": "Enter a valid email address",
+      "tenantPhonePL": "Enter phone number"
+    },
+    "stepTwo": {
+      "service": "Choose service",
+      "servicePL": "Select a Badi service",
+      "rentDuration": "Duration rental agreement (years)",
+      "rentDurationPL": "Enter duration",
+      "rentAmount": "Monthly rent (in €)",
+      "rentAmountPL": "Enter rent",
+      "rentalAddress": "Address of the property",
+      "rentalAddressPL": "Enter address",
+      "rentalCity": "City",
+      "rentalCityPL": "Enter the city name",
+      "rentalPostalCode": "Postal code",
+      "rentalPostalCodePL": "Enter the postal code",
+      "pp1": " By submitting this form, you understand and accept that we use your information in accordance with our",
+      "pp2": "privacy policy",
+      "pp3": "and",
+      "pp4": "cookies policy"
+    },
+    "completed": {
+      "title": "Warm welcome ",
+      "titleTwo": " from ",
+      "subtitle": "You have successfully registered",
+      "subtitleTwo": " as a new Tenant with Rimbo",
+      "subtext": "We just sent you an email to ",
+      "subtextTwo": "with all the information and next instructions for you",
+      "regards": "Best regards"
+    }
+  }
+}

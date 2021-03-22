@@ -1,0 +1,85 @@
+#[START runtime]
+runtime: nodejs12
+service: default
+#[END runtime]
+
+#[START handlers]
+handlers:
+  - url: /
+    static_files: build/index.html
+    upload: build/index.html
+    secure: always
+  - url: /register/agent
+    static_files: build/index.html
+    upload: build/index.html
+    secure: always
+  - url: /register/tenant/.*
+    static_files: build/index.html
+    upload: build/index.html
+    secure: always
+  - url: /register/annex/.*
+    static_files: build/index.html
+    upload: build/index.html
+    secure: always
+  - url: /register/card/.*
+    static_files: build/index.html
+    upload: build/index.html
+    secure: always
+  - url: /register/rj2/.*/approved
+    static_files: build/index.html
+    upload: build/index.html
+    secure: always
+  - url: /register/rj2/.*/rejected
+    static_files: build/index.html
+    upload: build/index.html
+    secure: always
+  - url: /register/rj2/.*/pm/approved
+    static_files: build/index.html
+    upload: build/index.html
+    secure: always
+  - url: /register/rj3/.*/card/approved
+    static_files: build/index.html
+    upload: build/index.html
+    secure: always
+  - url: /register/rjs/.*/service-start
+    static_files: build/index.html
+    upload: build/index.html
+    secure: always
+  - url: /
+    static_dir: build
+    secure: always
+# [END handlers]
+
+# [START variables]
+env_variables:
+  REACT_APP_BASE_URL: https://rimbo-api-dot-rimbo-test.ew.r.appspot.com/api
+  REACT_APP_API_RIMBO_TENANCY: /tenancies/tenancy
+  REACT_APP_API_RIMBO_TENANCY_BADI: /tenancies/tenancy/badi
+  REACT_APP_API_RIMBO_TENANCIES: /tenancies
+  REACT_APP_API_RIMBO_TENANT: /tenants/tenant
+  REACT_APP_API_RIMBO_TENANT_STRIPE: /tenants/stripe
+  REACT_APP_BASE_URL_EMAIL: https://badibackend-dot-rimbo-test.ew.r.appspot.com/submit-email
+  REACT_APP_BASE_URL_STRIPE: https://badibackend-dot-rimbo-test.ew.r.appspot.com/stripe
+# [END variables]
+
+# REACT_APP_API_RIMBO: "https://rimbo-api-dot-rimbo-302814.ew.r.appspot.com/api/tenancies"
+# API_RIMBO_TENANCIES: "https://rimbo-api-dot-rimbo-302814.ew.r.appspot.com/api/tenancies"
+# API_RIMBO_TENANCY: "https://rimbo-api-dot-rimbo-302814.ew.r.appspot.com/api/tenancies/tenancy/:tenancyID"
+# API_RIMBO_TENANT: "https://rimbo-api-dot-rimbo-302814.ew.r.appspot.com/api/tenants/tenant/:randomID"
+# API_RIMBO_TENANT_UPLOAD: "https://rimbo-api-dot-rimbo-302814.ew.r.appspot.com/api/tenants/tenant/:randomID/upload"
+# API_RIMBO_TENANT_CARD: "https://rimbo-api-dot-rimbo-302814.ew.r.appspot.com/api/tenants/stripe/:randomID"
+# API_RIMBO_TENANCY_BADI: "https://rimbo-api-dot-rimbo-302814.ew.r.appspot.com/api/tenancies/tenancy/badi/:tenancyID"
+# API_RIMBO_TENANCIES_RIMBO_START: "https://rimbo-api-dot-rimbo-302814.ew.r.appspot.com/api/tenancies/tenancy/:tenancyID/:tenancyID/rimbo/start-service"
+# API_RIMBO_TENANT_RIMBO_APPROVE: "https://rimbo-api-dot-rimbo-302814.ew.r.appspot.com/api/tenants/tenant/:randomID/approved"
+# API_RIMBO_TENANT_PM_APPROVE: "https://rimbo-api-dot-rimbo-302814.ew.r.appspot.com/api/tenants/tenant/:randomID/pm/approved"
+# SE_RJ1: "https://badibackend-dot-rimbo-badi.oa.r.appspot.com/submit-email/rj1"
+# SE_RJ2_TT: "https://badibackend-dot-rimbo-badi.oa.r.appspot.com/submit-email/rj2/tt"
+# SE_RJ2_RIMBO: "https://badibackend-dot-rimbo-badi.oa.r.appspot.com/submit-email/rj2/rimbo"
+# SE_RJ11: "https://badibackend-dot-rimbo-badi.oa.r.appspot.com/submit-email/rj11"
+# SE_RJPM: "https://badibackend-dot-rimbo-badi.oa.r.appspot.com/submit-email/rjpm"
+# SE_RJ3: "https://badibackend-dot-rimbo-badi.oa.r.appspot.com/submit-email/rj3"
+# SE_RJ15: "https://badibackend-dot-rimbo-badi.oa.r.appspot.com/submit-email/rj15"
+# SE_RJS: "https://badibackend-dot-rimbo-badi.oa.r.appspot.com/submit-email/rjs"
+# SE_RJ18: "https://badibackend-dot-rimbo-badi.oa.r.appspot.com/submit-email/rj18"
+# STRIPE_ACTION: "https://badibackend-dot-rimbo-badi.oa.r.appspot.com/stripe/card-wallet"
+
