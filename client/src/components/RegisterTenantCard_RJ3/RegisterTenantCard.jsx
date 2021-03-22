@@ -1,7 +1,6 @@
 // React Components
 import React, { useState, useEffect, useReducer } from "react";
 import { Helmet } from "react-helmet";
-
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
@@ -12,6 +11,9 @@ import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
 
 // Reducer-Constants
 import { UPDATE_NEWTENANT_INFO } from "./tenantStripe-constants";
+
+// Custom Components
+import InputIBAN from "../InputIBAN";
 
 // Multi language
 // import { withNamespaces } from "react-i18next";
@@ -113,6 +115,8 @@ const RegisterTenantCard = () => {
       .replace(/\..+/, "");
 
     const cardElement = elements.getElement("card");
+    const IBANNumber = document.getElementById("iban").value;
+    console.log(IBANNumber);
 
     setProcessingTo(true);
 
@@ -145,6 +149,7 @@ const RegisterTenantCard = () => {
         setIsSuccessfullySubmitted(true);
 
         // ! post a nuestra BDD
+        // ! Add here the IBAN number.
         await axios.post(
           `${REACT_APP_BASE_URL}${REACT_APP_API_RIMBO_TENANT_STRIPE}/${randomID}`,
           {
@@ -228,35 +233,48 @@ const RegisterTenantCard = () => {
                     the charge authorization
                   </h2>
                   <div>
-                    {tenancyData.product === "Administración" ? (
-                      <p>
-                        * The card will NOT be blocked. The card will NOT be
-                        charged now. Only in case of legal claims presented by
-                        the landlord the card will be charged, import limited to{" "}
-                        <span>1 month of rent.</span>
-                      </p>
-                    ) : (
+                    {/* {tenancyData.product === "Administración" ? ( */}
+                    <p>
+                      * The card will NOT be blocked. The card will NOT be
+                      charged now. Only in case of legal claims presented by the
+                      landlord the card will be charged, import limited to{" "}
+                      <span>1 month of rent.</span>
+                    </p>
+                    {/* ) : (
                       <p>
                         * The card will NOT be blocked. The card will NOT be
                         charged now. Only in case of legal claims presented by
                         the landlord the card will be charged, import limited to{" "}
                         <span>2 months of rent.</span>
                       </p>
-                    )}
+                    )} */}
                   </div>
                 </div>
               </div>
               <div className={styles.CardContainer}>
                 <form onSubmit={handleFormSubmit}>
                   <div className={styles.CardInput}>
-                    <label>
-                      <h3>Debit card details</h3>
-                      <div>
-                        <p id="name">{tenancyData.tenant.tenantsName}</p>
-                        <p id="email">{tenancyData.tenant.tenantsEmail}</p>
-                        <p id="phone">{tenancyData.tenant.tenantsPhone}</p>
-                      </div>
+                    <h3>Debit card details and IBAN number</h3>
+                    <div>
+                      {/* <p id="name">{tenancyData.tenant.tenantsName}</p>
+                      <p id="email">{tenancyData.tenant.tenantsEmail}</p>
+                      <p id="phone">{tenancyData.tenant.tenantsPhone}</p> */}
+                      <p id="name">Tenant's Full Name</p>
+                      <p id="email">Tenant's Email</p>
+                      <p id="phone">Tenant's phone</p>
+                    </div>
 
+                    <div>
+                      <InputIBAN
+                        type="text"
+                        name="iban"
+                        id="iban"
+                        label="IBAN Number"
+                        placeholder="ES91 2100 0418 4502 0005 1332"
+                      />
+                    </div>
+
+                    <label>
                       <CardElement
                         options={CARD_ELEMENT_OPTIONS}
                         onChange={handleCardDetailsChange}

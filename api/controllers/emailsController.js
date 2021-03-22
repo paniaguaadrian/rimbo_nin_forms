@@ -242,9 +242,9 @@ const sendRJ2FormEmails = async (req, res) => {
     text: "",
     attachments: [
       {
-        filename: "rimbo-logo.png",
-        path: "./views/images/rimbo-logo.png",
-        cid: "rimbologo",
+        filename: "nin-logo.png",
+        path: "./views/images/nin-logo.png",
+        cid: "ninlogo",
       },
     ],
     template: "rj9Email",
@@ -320,9 +320,9 @@ const sendRJ3FilesEmail = async (req, res) => {
     text: "",
     attachments: [
       {
-        filename: "rimbo-logo.png",
-        path: "./views/images/rimbo-logo.png",
-        cid: "rimbologo",
+        filename: "nin-logo.png",
+        path: "./views/images/nin-logo.png",
+        cid: "ninlogo",
       },
     ],
     template: "rjxx3FilesEmail",
@@ -1162,9 +1162,9 @@ const sendRJ2FormEmailsEn = async (req, res) => {
     text: "",
     attachments: [
       {
-        filename: "rimbo-logo.png",
-        path: "./views/images/rimbo-logo.png",
-        cid: "rimbologo",
+        filename: "nin-logo.png",
+        path: "./views/images/nin-logo.png",
+        cid: "ninlogo",
       },
     ],
     template: "rj9EmailEn",
@@ -1240,9 +1240,9 @@ const sendRJ3FilesEmailEn = async (req, res) => {
     text: "",
     attachments: [
       {
-        filename: "rimbo-logo.png",
-        path: "./views/images/rimbo-logo.png",
-        cid: "rimbologo",
+        filename: "nin-logo.png",
+        path: "./views/images/nin-logo.png",
+        cid: "ninlogo",
       },
     ],
     template: "rjxx3FilesEmailEn",

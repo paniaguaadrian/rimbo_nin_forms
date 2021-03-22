@@ -24,7 +24,7 @@ const Home = ({ t }) => {
 
         <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-        <title>Badi & Rimbo - The new way to rent</title>
+        <title>NiN & Rimbo - The new way to rent</title>
       </Helmet>
       <div className={styles.SuccessPageContainer}>
         <div className={styles.SuccessPageText}>
