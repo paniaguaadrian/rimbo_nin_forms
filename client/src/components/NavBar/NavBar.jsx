@@ -2,7 +2,7 @@
 import React from "react";
 
 // Images
-import BadiLogo from "../../images/badi_logo.png";
+import NiNLogo from "../../images/nin-logo.png";
 import SpanishLogo from "../../images/spanish-language.png";
 import EnglishLogo from "../../images/english-language.png";
 
@@ -20,7 +20,7 @@ const NavBar = () => {
 
   return (
     <div className={styles.NavBarContainer}>
-      <img className={styles.BadiImage} src={BadiLogo} alt="Badi Logo" />
+      <img className={styles.BadiImage} src={NiNLogo} alt="Badi Logo" />
 
       <div className={styles.ToggleButtonContainer}>
         <button

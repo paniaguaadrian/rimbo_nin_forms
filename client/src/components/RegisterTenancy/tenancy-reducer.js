@@ -4,25 +4,29 @@ import {
   UPDATE_PROPERTY_INFO,
 } from "./constants";
 
+const email = "paniaguasanchezadrian@gmail.com";
+
 export const DefaultTenancy = {
-  agencyName: "Badi",
-  agencyEmailPerson: "",
-  agencyContactPerson: "",
-  agencyPhonePerson: "",
-  tenancyID: "",
+  // Tenancy General
+
+  // Agent information
+  agencyName: "NiN",
+  agencyEmailPerson: email,
 
   tenantDetails: {
-    tenantName: "",
-    tenantPhone: "",
-    tenantEmail: "",
+    tenantsName: "",
+    tenantsEmail: "",
+    tenantsPhone: "",
+    randomID: "",
   },
+
   propertyDetails: {
-    rentalCity: "",
-    rentalPostalCode: "",
-    rentalAddress: "",
+    state: "",
     rentAmount: "",
-    rentDuration: "",
-    product: "",
+    rentStartDate: "",
+    rentEndDate: "",
+    propertyState: "",
+    tenancyID: "",
     isAgentAccepted: true,
   },
 };
@@ -52,15 +56,6 @@ export const TenancyReducer = (tenancy, { type, payload }) => {
           ...payload,
         },
       };
-
-    // case UPDATE_LANDLORD_INFO:
-    //   return {
-    //     ...tenancy,
-    //     landlordDetails: {
-    //       ...tenancy.landlordDetails,
-    //       ...payload,
-    //     },
-    //   };
 
     default:
       return tenancy;

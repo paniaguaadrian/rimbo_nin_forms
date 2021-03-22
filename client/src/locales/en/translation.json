@@ -32,8 +32,8 @@
       "tenantPhonePL": "Enter phone number"
     },
     "stepTwo": {
-      "service": "Choose service",
-      "servicePL": "Select a Badi service",
+      "service": "Choose a property",
+      "servicePL": "Select a property",
       "rentDuration": "Duration rental agreement (years)",
       "rentDurationPL": "Enter duration",
       "rentAmount": "Monthly rent (in €)",

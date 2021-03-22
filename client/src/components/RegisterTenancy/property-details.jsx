@@ -28,7 +28,8 @@ import i18n from "../../i18n";
 // End-Points env
 const {
   REACT_APP_BASE_URL,
-  REACT_APP_API_RIMBO_TENANCY_BADI,
+  REACT_APP_API_RIMBO_TENANCIES,
+
   REACT_APP_BASE_URL_EMAIL,
 } = process.env;
 
@@ -56,91 +57,85 @@ const PropertyDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
 
     const randomID = nanoid();
 
-    await axios.post(
-      `${REACT_APP_BASE_URL}${REACT_APP_API_RIMBO_TENANCY_BADI}`,
-      {
-        // tenant
-        tenantsName: tenancy.tenantDetails.tenantName,
-        tenantsEmail: tenancy.tenantDetails.tenantEmail,
-        tenantsPhone: tenancy.tenantDetails.tenantPhone,
-        randomID: randomID,
-        // agency, agent
-        agencyName: tenancy.agencyName,
-        agencyEmailPerson: tenancy.agencyEmailPerson,
-        agencyContactPerson: tenancy.agencyContactPerson,
-        agencyPhonePerson: tenancy.agencyPhonePerson,
-        isAgentAccepted: tenancy.propertyDetails.isAgentAccepted,
-        // property
-        rentalCity: tenancy.propertyDetails.rentalCity,
-        rentalPostalCode: tenancy.propertyDetails.rentalPostalCode,
-        rentalAddress: tenancy.propertyDetails.rentalAddress,
-        // tenancy
-        product: tenancy.propertyDetails.product,
-        rentDuration: tenancy.propertyDetails.rentDuration,
-        rentAmount: tenancy.propertyDetails.rentAmount,
-        tenancyID: randomID,
-        // property manager
-        PMName: tenancy.agencyName,
-      }
-    );
+    await axios.post(`${REACT_APP_BASE_URL}${REACT_APP_API_RIMBO_TENANCIES}`, {
+      tenantsName: tenancy.tenantDetails.tenantsName,
+      tenantsEmail: tenancy.tenantDetails.tenantsEmail,
+      tenantsPhone: tenancy.tenantDetails.tenantsPhone,
+      randomID: randomID,
+      agencyName: tenancy.agencyName,
+      agencyEmailPerson: tenancy.agencyEmailPerson,
+      isAgentAccepted: tenancy.propertyDetails.isAgentAccepted,
+      state: tenancy.propertyDetails.propertyState,
+      propertyState: tenancy.propertyDetails.propertyState,
+      rentAmount: tenancy.propertyDetails.rentAmount,
+      rentStartDate: tenancy.propertyDetails.rentStartDate,
+      rentEndDate: tenancy.propertyDetails.rentEndDate,
+      tenancyID: randomID,
+    });
 
     // ! Post to Email service
     if (i18n.language === "en") {
       await axios.post(`${REACT_APP_BASE_URL_EMAIL}/en/rj1`, {
-        tenantsName: tenancy.tenantDetails.tenantName,
-        tenantsEmail: tenancy.tenantDetails.tenantEmail,
-        tenantsPhone: tenancy.tenantDetails.tenantPhone,
+        tenantsName: tenancy.tenantDetails.tenantsName,
+        tenantsEmail: tenancy.tenantDetails.tenantsEmail,
+        tenantsPhone: tenancy.tenantDetails.tenantsPhone,
         agencyName: tenancy.agencyName,
-        agencyContactPerson: tenancy.agencyContactPerson,
-        agencyPhonePerson: tenancy.agencyPhonePerson,
         agencyEmailPerson: tenancy.agencyEmailPerson,
-        rentDuration: tenancy.propertyDetails.rentDuration,
-        product: tenancy.propertyDetails.product,
+        isAgentAccepted: tenancy.propertyDetails.isAgentAccepted,
+        state: tenancy.propertyDetails.propertyState,
+        propertyState: tenancy.propertyDetails.propertyState,
         rentAmount: tenancy.propertyDetails.rentAmount,
-        rentalAddress: tenancy.propertyDetails.rentalAddress,
-        rentalPostalCode: tenancy.propertyDetails.rentalPostalCode,
-        rentalCity: tenancy.propertyDetails.rentalCity,
+        rentStartDate: tenancy.propertyDetails.rentStartDate,
+        rentEndDate: tenancy.propertyDetails.rentEndDate,
+        tenancyID: randomID,
         randomID,
       });
     } else {
       await axios.post(`${REACT_APP_BASE_URL_EMAIL}/rj1`, {
-        tenantsName: tenancy.tenantDetails.tenantName,
-        tenantsEmail: tenancy.tenantDetails.tenantEmail,
-        tenantsPhone: tenancy.tenantDetails.tenantPhone,
+        tenantsName: tenancy.tenantDetails.tenantsName,
+        tenantsEmail: tenancy.tenantDetails.tenantsEmail,
+        tenantsPhone: tenancy.tenantDetails.tenantsPhone,
         agencyName: tenancy.agencyName,
-        agencyContactPerson: tenancy.agencyContactPerson,
-        agencyPhonePerson: tenancy.agencyPhonePerson,
         agencyEmailPerson: tenancy.agencyEmailPerson,
-        rentDuration: tenancy.propertyDetails.rentDuration,
-        product: tenancy.propertyDetails.product,
+        isAgentAccepted: tenancy.propertyDetails.isAgentAccepted,
+        state: tenancy.propertyDetails.propertyState,
+        propertyState: tenancy.propertyDetails.propertyState,
         rentAmount: tenancy.propertyDetails.rentAmount,
-        rentalAddress: tenancy.propertyDetails.rentalAddress,
-        rentalPostalCode: tenancy.propertyDetails.rentalPostalCode,
-        rentalCity: tenancy.propertyDetails.rentalCity,
+        rentStartDate: tenancy.propertyDetails.rentStartDate,
+        rentEndDate: tenancy.propertyDetails.rentEndDate,
+        tenancyID: randomID,
         randomID,
       });
     }
 
     setStep(step + 1);
+    console.log(tenancy);
   };
 
-  const services = ["Administración", "Gestión", "Protección"];
+  const properties = [
+    "Property 1",
+    "Property 2",
+    "Property 3",
+    "Property 4",
+    "Property 5",
+    "Property 6",
+  ];
 
   return (
     <form onSubmit={handleSubmit}>
       <div className={styles.FormIntern}>
         <div className={styles.FormLeft}>
           <div className={styles.selectContainer}>
-            <label className={styles.selectLabel} htmlFor="product">
+            <label className={styles.selectLabel} htmlFor="propertyState">
               {t("RJ1.stepTwo.service")}
             </label>
             <select
               required
-              name="product"
+              name="propertyState"
               className={styles.selectInput}
-              value={tenancy.propertyDetails.product}
+              value={tenancy.propertyState}
               onChange={(e) => handleAgency(e)}
-              error={errors.product}
+              error={errors.propertyState}
             >
               <option value="">{t("RJ1.stepTwo.servicePL")}</option>
               {/* <option name="product" value={t("RJ1.stepTwo.servicesOne")}>
@@ -152,13 +147,13 @@ const PropertyDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
               <option name="product" value={t("RJ1.stepTwo.servicesThree")}>
                 {t("RJ1.stepTwo.servicesThree")}
               </option> */}
-              {services.map((c) => (
+              {properties.map((c) => (
                 <option key={c}>{c}</option>
               ))}
             </select>
           </div>
 
-          <Input
+          {/* <Input
             type="text"
             name="rentDuration"
             value={tenancy.propertyDetails.rentDuration}
@@ -166,11 +161,11 @@ const PropertyDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
             placeholder={t("RJ1.stepTwo.rentDurationPL")}
             onChange={(e) => handleAgency(e)}
             error={errors.rentDuration}
-          />
+          /> */}
           <Input
             type="text"
             name="rentAmount"
-            value={tenancy.propertyDetails.rentAmount}
+            value={tenancy.rentAmount}
             label={t("RJ1.stepTwo.rentAmount")}
             placeholder={t("RJ1.stepTwo.rentAmountPL")}
             onChange={(e) => handleAgency(e)}
@@ -179,6 +174,24 @@ const PropertyDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
         </div>
         <div className={styles.FormRight}>
           <Input
+            type="date"
+            name="rentStartDate"
+            value={tenancy.rentStartDate}
+            label="Rental start date"
+            placeholder="Write your income"
+            onChange={(e) => handleAgency(e)}
+            required
+          />
+          <Input
+            type="date"
+            name="rentEndDate"
+            value={tenancy.rentEndDate}
+            label="Rental end date"
+            placeholder="Write your income"
+            onChange={(e) => handleAgency(e)}
+            required
+          />
+          {/* <Input
             type="text"
             name="rentalAddress"
             value={tenancy.propertyDetails.rentalAddress}
@@ -186,8 +199,8 @@ const PropertyDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
             placeholder={t("RJ1.stepTwo.rentalAddressPL")}
             onChange={(e) => handleAgency(e)}
             error={errors.rentalAddress}
-          />
-          <Input
+          /> */}
+          {/* <Input
             type="text"
             name="rentalCity"
             value={tenancy.propertyDetails.rentalCity}
@@ -195,8 +208,8 @@ const PropertyDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
             placeholder={t("RJ1.stepTwo.rentalCityPL")}
             onChange={(e) => handleAgency(e)}
             error={errors.rentalCity}
-          />
-          <Input
+          /> */}
+          {/* <Input
             type="text"
             name="rentalPostalCode"
             value={tenancy.propertyDetails.rentalPostalCode}
@@ -204,7 +217,7 @@ const PropertyDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
             placeholder={t("RJ1.stepTwo.rentalPostalCodePL")}
             onChange={(e) => handleAgency(e)}
             error={errors.rentalPostalCode}
-          />
+          /> */}
         </div>
       </div>
       <div className={styles.TermsContainer}>

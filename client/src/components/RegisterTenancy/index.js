@@ -20,7 +20,7 @@ const RegisterTenancy = ({ t }) => {
   return (
     <>
       <div className={styles.RegisterContainer}>
-        {step === 0 || step === 1 || step === 2 ? (
+        {step === 0 || step === 1 ? (
           <div className={styles.Register}>
             {/* <h1>List your tenant for screening</h1> */}
             <h1>{t("RJ1.header.title")}</h1>

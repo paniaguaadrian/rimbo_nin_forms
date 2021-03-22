@@ -32,8 +32,8 @@
       "tenantPhonePL": "Escribe el número de teléfono"
     },
     "stepTwo": {
-      "service": "Servicio escogido",
-      "servicePL": "Escoge un servicio",
+      "service": "Inmueble escogido",
+      "servicePL": "Escoge un inmueble",
       "rentDuration": "Duración el contrato de alquiler (años)",
       "rentDurationPL": "Escribe la duración",
       "rentAmount": "Alquiler mensual (en €)",
@@ -51,7 +51,7 @@
     },
     "completed": {
       "title": "Saludos ",
-      "titleTwo": " de ",
+      "titleTwo": " desde ",
       "subtitle": "Has registrado correctamente los datos de",
       "subtitleTwo": " como nuevo inquilino en Rimbo",
       "subtext": "Acabamos de enviarte un correo a ",

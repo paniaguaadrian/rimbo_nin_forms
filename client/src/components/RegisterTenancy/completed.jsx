@@ -16,14 +16,14 @@ const Completed = ({ tenancy, t }) => {
           {t("RJ1.completed.title")} {""}
           <b>
             {""}
-            {`${tenancy.agencyContactPerson}`}
+            {`${tenancy.agencyName}`}
             {""}
           </b>
-          {""} {t("RJ1.completed.titleTwo")} <b> {`${tenancy.agencyName}`}</b>
+          {""} {t("RJ1.completed.titleTwo")} <b> Rimbo.Rent</b>
         </h1>
         <h3>
           {t("RJ1.completed.subtitle")}{" "}
-          <b>{`${tenancy.tenantDetails.tenantName}`}</b>{" "}
+          <b>{`${tenancy.tenantDetails.tenantsName}`}</b>{" "}
           {t("RJ1.completed.subtitleTwo")}
         </h3>
         <p>

@@ -44,8 +44,8 @@ const TenantDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
         <div className={styles.FormLeft}>
           <Input
             type="text"
-            name="tenantName"
-            value={tenancy.tenantDetails.tenantName}
+            name="tenantsName"
+            value={tenancy.tenantDetails.tenantsName}
             label={t("RJ1.stepOne.tenantName")}
             placeholder={t("RJ1.stepOne.tenantNamePL")}
             onChange={(e) => handleTenant(e)}
@@ -53,8 +53,8 @@ const TenantDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
           />
           <Input
             type="email"
-            name="tenantEmail"
-            value={tenancy.tenantDetails.tenantEmail}
+            name="tenantsEmail"
+            value={tenancy.tenantDetails.tenantsEmail}
             label={t("RJ1.stepOne.tenantEmail")}
             placeholder={t("RJ1.stepOne.tenantEmailPL")}
             onChange={(e) => handleTenant(e)}
@@ -64,8 +64,8 @@ const TenantDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
         <div className={styles.FormRight}>
           <Input
             type="text"
-            name="tenantPhone"
-            value={tenancy.tenantDetails.tenantPhone}
+            name="tenantsPhone"
+            value={tenancy.tenantDetails.tenantsPhone}
             label={t("RJ1.stepOne.tenantPhone")}
             placeholder={t("RJ1.stepOne.tenantPhonePL")}
             onChange={(e) => handleTenant(e)}
