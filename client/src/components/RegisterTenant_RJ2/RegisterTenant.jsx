@@ -295,6 +295,7 @@ const RegisterTenant = () => {
     "I am a student",
     "Other",
   ];
+  const rentPayment = ["Monthly payment", "One time payment"];
 
   return (
     <>
@@ -398,6 +399,31 @@ const RegisterTenant = () => {
                     />
                   </div>
                 </div>
+                <div className={style.GroupInputOne}>
+                  <div className={style.FormLeft}>
+                    <div className={styles.selectContainer}>
+                      <label
+                        className={styles.selectLabel}
+                        htmlFor="documentType"
+                      >
+                        Rent payment
+                      </label>
+                      <select
+                        required
+                        name="documentType"
+                        className={styles.selectInput}
+                        value={tenant.documentType}
+                        onChange={(e) => handleNewTenant(e)}
+                        error={errors.documentType}
+                      >
+                        <option value="">Select rent payment</option>
+                        {rentPayment.map((c) => (
+                          <option key={c}>{c}</option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+                </div>
                 <div className={style.GroupInput}>
                   <div className={style.FormLeft}>
                     <div className={styles.selectContainer}>
@@ -434,6 +460,7 @@ const RegisterTenant = () => {
                     />
                   </div>
                 </div>
+
                 <div className={style.GroupInput}>
                   <div className={style.FormLeft}>
                     <InputFile

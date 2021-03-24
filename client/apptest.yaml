@@ -62,24 +62,3 @@ env_variables:
   REACT_APP_BASE_URL_STRIPE: https://badibackend-dot-rimbo-test.ew.r.appspot.com/stripe
 # [END variables]
 
-# REACT_APP_API_RIMBO: "https://rimbo-api-dot-rimbo-302814.ew.r.appspot.com/api/tenancies"
-# API_RIMBO_TENANCIES: "https://rimbo-api-dot-rimbo-302814.ew.r.appspot.com/api/tenancies"
-# API_RIMBO_TENANCY: "https://rimbo-api-dot-rimbo-302814.ew.r.appspot.com/api/tenancies/tenancy/:tenancyID"
-# API_RIMBO_TENANT: "https://rimbo-api-dot-rimbo-302814.ew.r.appspot.com/api/tenants/tenant/:randomID"
-# API_RIMBO_TENANT_UPLOAD: "https://rimbo-api-dot-rimbo-302814.ew.r.appspot.com/api/tenants/tenant/:randomID/upload"
-# API_RIMBO_TENANT_CARD: "https://rimbo-api-dot-rimbo-302814.ew.r.appspot.com/api/tenants/stripe/:randomID"
-# API_RIMBO_TENANCY_BADI: "https://rimbo-api-dot-rimbo-302814.ew.r.appspot.com/api/tenancies/tenancy/badi/:tenancyID"
-# API_RIMBO_TENANCIES_RIMBO_START: "https://rimbo-api-dot-rimbo-302814.ew.r.appspot.com/api/tenancies/tenancy/:tenancyID/:tenancyID/rimbo/start-service"
-# API_RIMBO_TENANT_RIMBO_APPROVE: "https://rimbo-api-dot-rimbo-302814.ew.r.appspot.com/api/tenants/tenant/:randomID/approved"
-# API_RIMBO_TENANT_PM_APPROVE: "https://rimbo-api-dot-rimbo-302814.ew.r.appspot.com/api/tenants/tenant/:randomID/pm/approved"
-# SE_RJ1: "https://badibackend-dot-rimbo-badi.oa.r.appspot.com/submit-email/rj1"
-# SE_RJ2_TT: "https://badibackend-dot-rimbo-badi.oa.r.appspot.com/submit-email/rj2/tt"
-# SE_RJ2_RIMBO: "https://badibackend-dot-rimbo-badi.oa.r.appspot.com/submit-email/rj2/rimbo"
-# SE_RJ11: "https://badibackend-dot-rimbo-badi.oa.r.appspot.com/submit-email/rj11"
-# SE_RJPM: "https://badibackend-dot-rimbo-badi.oa.r.appspot.com/submit-email/rjpm"
-# SE_RJ3: "https://badibackend-dot-rimbo-badi.oa.r.appspot.com/submit-email/rj3"
-# SE_RJ15: "https://badibackend-dot-rimbo-badi.oa.r.appspot.com/submit-email/rj15"
-# SE_RJS: "https://badibackend-dot-rimbo-badi.oa.r.appspot.com/submit-email/rjs"
-# SE_RJ18: "https://badibackend-dot-rimbo-badi.oa.r.appspot.com/submit-email/rj18"
-# STRIPE_ACTION: "https://badibackend-dot-rimbo-badi.oa.r.appspot.com/stripe/card-wallet"
-

@@ -47,6 +47,15 @@
   }
 }
 
+.GroupInputOne {
+  @include xl {
+    margin-left: 18.55%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+  }
+}
+
 .FormLeft {
   @include xl {
     display: flex;
